@@ -1,7 +1,8 @@
 //logo + nav
 import React from 'react';
-import logo from './image/logo_kasa.png';
-import './components/Header.scss';
+import logo from '../image/logo_kasa.png';
+import '../components/header.scss';
+import '../pages/styles.scss';
 import { Link } from 'react-router-dom';
 
 function Header() {

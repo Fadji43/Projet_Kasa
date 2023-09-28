@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
+$page-width: 1440px; 
+$page-height: 1517px;
+
+// Variables pour la couleur
+$primary-color: #FF6060;
+$secondary-color: #F6F6F6;
+
+// Variables pour la taille
+$font-size-base: 16px;
+$line-height-base: 1.5;
+
+// Variables pour la typographie
+$font-family: 'montserrat', sans-serif;
+$font-weight-normal: 500;
+$font-weight-bold: 700;
+
+// Variables pour les marges et les espacements
+$margin: 10px;
+$padding: 15px;
+
+// taille reakpoints écran
+$breakpoints: (
+  small: 350px,
+  medium: 768px,
+  large: 992px,
+  xlarge: 1200px,
+);
+
+$breakpoint-desktop: 769px;
+
+$wmin: 375px;
+$wmax: 768px;
+
+// Définition des styles globaux
+body {
+  font-family: $font-family;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $font-weight-bold;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $secondary-color;
+  }
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}

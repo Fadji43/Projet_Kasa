@@ -1,0 +1,46 @@
+@import  '../pages/styles.scss';
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 80px;
+  padding: 0 20px;
+}
+
+.about-tab {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color:$primary-color;
+  border-radius: 20px;
+  padding: 10px 20px; 
+
+  .about-text {
+    color: white;
+    flex-grow: 1;
+  }
+
+  .about-button {
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+  }
+
+.about-caption {
+  color: $primary-color;
+  background-color: $secondary-color;
+  display: block; 
+  margin: 0 10px;
+  overflow: hidden;
+  transition: height 1s ease-in-out;
+}
+
+.about-caption.open {
+  height: auto; /* Lorsque la classe "open" est ajoutée, la hauteur devient automatique */
+}
+
+}
