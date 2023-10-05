@@ -3,8 +3,8 @@
 .about-container {
   display: flex;
   flex-direction: column;
-  margin: 20px 80px;
-  padding: 0 20px;
+  justify-content: center;
+  margin: 20px 150px;
 }
 
 .about-tab {
@@ -12,35 +12,46 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color:$primary-color;
-  border-radius: 20px;
-  padding: 10px 20px; 
+  background-color: $primary-color; 
+  border-radius: 10px;
+  padding: 0px 10px;
 
   .about-text {
     color: white;
+    font-size: 24px;
     flex-grow: 1;
   }
 
-  .about-button {
-    background-color: $primary-color;
+  .chevron-icon {
+    background-color: $primary-color; /* Assurez-vous que $primary-color est défini */
     color: white;
     border: none;
-    padding: 10px 20px;
     cursor: pointer;
     border: none;
+    transition: transform 0.3s; /* Ajoutez une transition pour la rotation */
+
+    &.open {
+      transform: rotate(180deg); /* Appliquez la rotation de 180 degrés */
+    }
   }
+}
 
 .about-caption {
-  color: $primary-color;
-  background-color: $secondary-color;
-  display: block; 
+  color: $primary-color; 
+  background-color: $secondary-color; 
+  
+  border-radius: 0 0 10px 10px ;
+  padding: 20px;
+  
+}
+
+.about-tab.open .about-caption {
+  color: $primary-color; 
+  background-color: $secondary-color; 
+  font-size: 18px;
   margin: 0 10px;
   overflow: hidden;
+  display: block; 
+  height: auto; 
   transition: height 1s ease-in-out;
-}
-
-.about-caption.open {
-  height: auto; /* Lorsque la classe "open" est ajoutée, la hauteur devient automatique */
-}
-
 }

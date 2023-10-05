@@ -1,0 +1,31 @@
+@import  '../pages/styles.scss';
+
+.accomodation_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Utilisez grid-template-columns pour définir les colonnes */
+  grid-gap: 20px; 
+  max-width: 1240px; 
+  margin: 0 100px;
+}
+  
+.accomodation_left {
+  grid-column: 1
+}
+  
+.accomodation_location {
+  align-items: flex-start; 
+ 
+  
+  h2 {
+    
+    font-size: 36px;
+    color: $primary-color;
+  }
+
+  h4 {
+    font-size: $font-size-little-title;
+    color: $primary-color;
+  }
+}
+
+

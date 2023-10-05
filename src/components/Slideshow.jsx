@@ -1,45 +1,34 @@
-import React, { useState, useEffect } from 'react';
-import './slideshow.scss'; // Importez les styles pour le carrousel si nécessaire
+import React, { useState } from 'react';
+import './slideshow.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
-function Slideshow() {
-  const [logements, setLogements] = useState([]);
+
+function Slideshow({ logements }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  useEffect(() => {
-    // Chargez les données de logements depuis le fichier JSON
-    fetch('/chemin/vers/logements.json')
-      .then((response) => response.json())
-      .then((data) => {
-        setLogements(data);
-      })
-      .catch((error) => {
-        console.error('Erreur lors du chargement des données de logements :', error);
-      });
-  }, []);
-
-  // Fct image suivante
-  const nextImage = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === logements.length - 1 ? 0 : prevIndex + 1
-    );
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? logements.length - 1 : prevIndex - 1));
   };
 
-  // Fct retour arrière image
-  const prevImage = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? logements.length - 1 : prevIndex - 1
-    );
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % logements.length);
   };
 
   return (
-    <div className="slideshow">
-      {logements.length > 0 && (
-        <>
-          <img src={logements[currentIndex].pictures} />
-          <button onClick={prevImage}>Précédent</button>
-          <button onClick={nextImage}>Suivant</button>
-        </>
-      )}
+    <div className="slideshowContainer">
+        <div className="slideshow">
+        <button onClick={prevSlide} className="slideshow_button">
+            <FontAwesomeIcon icon={faChevronLeft} />
+          </button>
+          <img
+            src={logements[currentIndex].pictures}
+            alt={logements[currentIndex].title}
+          />
+          <button onClick={nextSlide} className="slideshow_button">
+            <FontAwesomeIcon icon={faChevronRight} />
+          </button>
+        </div>
     </div>
   );
 }

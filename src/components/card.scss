@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 30px; /* Espace entre les cartes */
+  gap: 30px; 
   background-color:  #F6F6F6;
   padding: 55px;
   margin: 30px 100px; 
@@ -30,17 +30,9 @@
       object-fit: cover; 
       aspect-ratio: 1/1; 
       border-radius: 20px;
-      box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
+      box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.5);
 
-      &::before {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 80%; /* Hauteur de l'ombrage noir, ajustez selon vos besoins */
-        background: linear-gradient(rgba(0, 0, 0, 0.5), transparent); /* Ombrage noir en dégradé */
-      }
+    
     }
 
     .card_title {

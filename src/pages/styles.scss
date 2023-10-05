@@ -8,7 +8,10 @@ $primary-color: #FF6060;
 $secondary-color: #F6F6F6;
 
 // Variables pour la taille
-$font-size-base: 16px;
+$font-size-base: 14px;
+$font-size-little-title: 18px;
+$font-size-title: 24px;
+$font-size-bit-title: 48px;
 $line-height-base: 1.5;
 
 // Variables pour la typographie
@@ -41,7 +44,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: $font-weight-bold;
+  font-weight: $font-weight-normal;
 }
 
 a {

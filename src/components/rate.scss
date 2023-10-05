@@ -1,0 +1,27 @@
+@import  '../pages/styles.scss';
+
+.accomodation_right {
+    grid-column: 2
+  }
+  .accomodation_host {
+    grid-column:2;
+    display: flex; 
+    flex-direction: row; 
+  
+    h4 {
+      font-size: $font-size-little-title;
+    }
+  
+    img {
+      width: 100px;
+      border-radius: 80%;
+      background-color: $secondary-color;
+    }
+  }
+  
+.accomodation_rating {
+    grid-column: 2;
+    color: red;
+    }
+  
+  
