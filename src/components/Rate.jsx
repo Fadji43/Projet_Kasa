@@ -10,7 +10,7 @@ function Rate({ logements }) {
     }
 
     const currentLogement = logements[0];
-    
+
     // Vérifiez si currentLogement existe et s'il a la propriété 'rating'.
     if (!currentLogement || !currentLogement.rating) {
         return <div className="accomodation_right">Aucune étoiles de notation disponible</div>;

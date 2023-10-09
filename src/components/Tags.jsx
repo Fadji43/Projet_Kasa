@@ -11,8 +11,8 @@ function Tags({logements}) {
 return (
     <div className="accomodation_tags">
         <div className="tags-container">
-            {currentLogement.tags.map((tag, index) => (
-                <span key={index} className="tag">{tag}</span>
+            {currentLogement.tags.map((tags, index) => (
+                <span key={index} className="tag">{tags}</span>
             ))}
         </div>
     </div>

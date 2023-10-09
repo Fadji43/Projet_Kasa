@@ -28,6 +28,7 @@
     border: none;
     cursor: pointer;
     border: none;
+    font-size: 50px;
     transition: transform 0.3s; /* Ajoutez une transition pour la rotation */
 
     &.open {
@@ -39,17 +40,18 @@
 .about-caption {
   color: $primary-color; 
   background-color: $secondary-color; 
-  
+  font-size: 18px;
   border-radius: 0 0 10px 10px ;
-  padding: 20px;
+
   
 }
 
-.about-tab.open .about-caption {
+.about-tab[data-open=true] .about-caption {
   color: $primary-color; 
   background-color: $secondary-color; 
   font-size: 18px;
   margin: 0 10px;
+  padding: 20px;
   overflow: hidden;
   display: block; 
   height: auto; 

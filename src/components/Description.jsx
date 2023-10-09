@@ -2,7 +2,7 @@ import React from 'react';
 import './description.scss'; 
 
 function Description({logements}) {
-    const currentLogement = logements[0];
+    const currentLogement = logements;
 
   return (
     <div className="accomodation">
