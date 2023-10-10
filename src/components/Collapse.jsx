@@ -12,20 +12,26 @@ function Collapse({ title, content }) {
   };
 
   return (
-<div className="about-container">
-  <article data-open={isCollapsed ? 'false' : 'true'} className={`about-tab ${isCollapsed ? '' : 'open'}`}>
-    <h3 className="about-text">{title}</h3>
-    <a onClick={toggleCollapse}>
-      <FontAwesomeIcon
-        icon={isCollapsed ? faChevronDown : faChevronDown}
-        className={`chevron-icon ${isCollapsed ? '' : 'open'}`} />
-    </a>
-  </article>
-  <div className='about-caption'>
-    {!isCollapsed && <div >{content}</div>}
-  </div>   
-</div>
-);
-}
+    <div className="about-container">
+      <article
+        data-open={isCollapsed ? 'false' : 'true'}
+        className={`about-tab ${isCollapsed ? '' : 'open'}`}
+      >
+        <h3 className="about-text">{title}</h3>
+        <a onClick={toggleCollapse}>
+          <FontAwesomeIcon
+            icon={isCollapsed ? faChevronDown : faChevronDown}
+            className={`chevron-icon ${isCollapsed ? '' : 'open'}`}
+          />
+        </a>
+      </article>
+      {isCollapsed ? null : (
+        <div className='about-caption'>
+          <div>{content}</div>
+        </div>
+      )}
+    </div> 
+  )}
+     
 
 export default Collapse;

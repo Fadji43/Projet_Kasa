@@ -1,12 +1,8 @@
 @import  '../pages/styles.scss';
 
-.accomodation_right {
-    grid-column: 2
-  }
   .accomodation_host {
-    grid-column:2;
     display: flex; 
-    flex-direction: row; 
+    flex-direction: column; 
   
     h4 {
       font-size: $font-size-little-title;
@@ -19,6 +15,15 @@
     }
   }
   
+ .profil {
+grid-row: 2;
+ }
+
+ .host {
+  font-size: $font-size-little-title;
+  color: $primary-color;
+ }
+
 .accomodation_rating {
     grid-column: 2;
     color: red;

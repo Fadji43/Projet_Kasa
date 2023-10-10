@@ -5,46 +5,62 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 function Dropdown({ logements }) {
   const currentLogement = logements;
-  const [isCollapsed, setIsCollapsed] = useState({ description: true, equipments: true });
+  const [isDescriptionCollapsed, setIsDescriptionCollapsed] = useState(true);
+  const [isEquipmentsCollapsed, setIsEquipmentsCollapsed] = useState(true);
 
-  
-    const toggleCollapse = () => {
-      setIsCollapsed(!isCollapsed);
-    };
-  
+  const toggleDescriptionCollapse = () => {
+    setIsDescriptionCollapsed(!isDescriptionCollapsed);
+  };
+
+  const toggleEquipmentsCollapse = () => {
+    setIsEquipmentsCollapsed(!isEquipmentsCollapsed);
+  };
+
   return (
     <div className="dropdown_container">
       <div className="dropdown">
-        <article data-open={isCollapsed ? 'false' : 'true'} className={`about-tab ${isCollapsed ? '' : 'open'}`}>
+        <article
+          data-open={isDescriptionCollapsed ? 'false' : 'true'}
+          className={`about-tab ${isDescriptionCollapsed ? '' : 'open'}`}
+        >
           <h3 className="dropdown-title">Description</h3>
-          <a onClick={toggleCollapse}>
+          <a onClick={toggleDescriptionCollapse}>
             <FontAwesomeIcon
-              icon={isCollapsed ? faChevronDown : faChevronDown}
-              className={`chevron-icon ${isCollapsed ? '' : 'open'}`} />
+              icon={isDescriptionCollapsed ? faChevronDown : faChevronDown}
+              className={`chevron-icon ${isDescriptionCollapsed ? '' : 'open'}`}
+            />
           </a>
         </article>
-        <div className='dropdown-text'>
-          {!isCollapsed && <div >{currentLogement.description}</div>}
-        </div>  
-      </div>  
+        {isDescriptionCollapsed ? null : (
+          <div className='dropdown-text'>
+            <div>{currentLogement.description}</div>
+          </div>
+        )}
+      </div>
       <div className="dropdown">
-        <article data-open={isCollapsed ? 'false' : 'true'} className={`about-tab ${isCollapsed ? '' : 'open'}`}>
-          <h3 className="dropdown-title">Equipements</h3>
-          <a onClick={toggleCollapse}>
+        <article
+          data-open={isEquipmentsCollapsed ? 'false' : 'true'}
+          className={`about-tab ${isEquipmentsCollapsed ? '' : 'open'}`}
+        >
+          <h3 className="dropdown-title">Équipements</h3>
+          <a onClick={toggleEquipmentsCollapse}>
             <FontAwesomeIcon
-              icon={isCollapsed ? faChevronDown : faChevronDown}
-              className={`chevron-icon ${isCollapsed ? '' : 'open'}`} />
+              icon={isEquipmentsCollapsed ? faChevronDown : faChevronDown}
+              className={`chevron-icon ${isEquipmentsCollapsed ? '' : 'open'}`}
+            />
           </a>
         </article>
-        <div className='dropdown-text'>
-          {!isCollapsed && <div >{currentLogement.equipments}</div>}
-        </div>
-      </div> 
+        {isEquipmentsCollapsed ? null : (
+          <div className='dropdown-text'>
+            {currentLogement.equipments.map((equipment, index) => (
+              <div key={index}>{equipment}</div>
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   );
 }
 
-
-
-  
 export default Dropdown;
+
