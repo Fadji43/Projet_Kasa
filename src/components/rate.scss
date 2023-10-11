@@ -2,31 +2,29 @@
 
   .accomodation_host {
     display: flex; 
-    flex-direction: column; 
-  
-    h4 {
-      font-size: $font-size-little-title;
-    }
-  
-    img {
-      width: 100px;
-      border-radius: 80%;
-      background-color: $secondary-color;
-    }
+    flex-direction: column;
+    align-items: flex-end; 
+    margin: 30px 100px;
+    column-gap: 100px;
   }
   
  .profil {
-grid-row: 2;
- }
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  margin-bottom: 50px;
+}
 
- .host {
+
+  .host {
+  width: 50%;
+  display: flex; /* Utilisez Flexbox ici */
+  flex-direction: column; /* Organisez le nom et le prénom en colonne */
   font-size: $font-size-little-title;
   color: $primary-color;
- }
+  }
 
-.accomodation_rating {
-    grid-column: 2;
-    color: red;
-    }
-  
-  
+  .host_img {
+  width: 64px;
+  border-radius: 80%;
+  }

@@ -1,5 +1,6 @@
 import React from 'react';
 import './rate.scss'; 
+import '../pages/styles.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 
@@ -13,18 +14,24 @@ function Rate({ logements }) {
   const stars = [];
   for (let i = 0; i < 5; i++) {
     if (i < rating) {
-      stars.push(<FontAwesomeIcon key={i} icon={faStar} style={{ color: 'gold' }} />);
+      stars.push(
+        <FontAwesomeIcon key={i} icon={faStar} style={{ color: '#FF6060', fontSize: '24px' }} />
+      );
+      
     } else {
-      stars.push(<FontAwesomeIcon key={i} icon={faStar} style={{ color: 'gray' }} />);
+      stars.push(
+        <FontAwesomeIcon key={i} icon={faStar} style={{ color: '#F6F6F6', fontSize: '24px' }} />
+      );
+      
     }
   }
 
   return (
       <div className="accomodation_host">
         {logements.host && (
-          <div className=''>
+          <div className='profil'>
             <span className="host">{logements.host.name}</span>
-            <img className="img" src={logements.host.picture} alt="photo profil" />
+            <img className="host_img" src={logements.host.picture} alt="photo profil" />
           </div>
         )}
         <div className="accomodation_rating">

@@ -28,21 +28,14 @@
       background-color: $secondary-color;
       font-size: 18px;
       border-radius: 0 0 10px 10px;
-     
+      height: 120px;
       padding: 20px;
+      overflow: hidden;
+      transition: height 1s ease-in-out;
     }
 
     .dropdown[data-open=true] .dropdown-text {
       display: block;
-      margin: 0;
-      color: $primary-color;
-      background-color: $secondary-color;
-      font-size: 18px;
-      border-radius: 0 0 10px 10px;
-      padding: 20px;
-      overflow: hidden;
-      text-align: center;
-      height: 200px;
-      transition: height 1s ease-in-out;
+      
     }
 
