@@ -1,7 +1,8 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import Slideshow from '../components/Slideshow';
+import Layout from '../components/Layout';
 import Description from '../components/Description';
 import Tags from '../components/Tags';
 import Rate from '../components/Rate';
@@ -10,24 +11,32 @@ import Footer from '../components/Footer';
 import logementsData from '../data/logements.json';
 
 function Housing() {
-  let { id } = useParams();
-  console.log(id);
-  const logements = logementsData.filter((log) => log.id == id)[0];
-  console.log(logements);
+  const { id } = useParams();
+  const navigate = useNavigate();
+
+  // Vérifiez si l'ID est valide
+  const isValidId = logementsData.some((logement) => logement.id === id);
+
+  if (!isValidId) {
+    navigate('./error'); // Redirige vers la page d'erreur si l'ID n'est pas valide
+    return null; 
+  }
+
+  const logements = logementsData.find((log) => log.id === id);
 
   return (
     <main>
       <Header />
       <Slideshow logements={logements} />
-      <div style={{ display: 'flex' }}>
-        <div style={{ flex: 1 }}>
+      <Layout className="layout">
+        <div className="left-column">
           <Description logements={logements} />
           <Tags logements={logements} />
         </div>
-        <div style={{ flex: 1 }}>
+        <div className="right-column">
           <Rate logements={logements} />
         </div>
-      </div>
+      </Layout>
       <Dropdown logements={logements} />
       <Footer />
     </main>

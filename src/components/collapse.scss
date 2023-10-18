@@ -4,9 +4,12 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 20px 150px;
+  margin: 50px 150px;
+  
+  @media screen and (max-width: 768px) {
+    margin: 40px 50px;
+  }
 }
-
 .about-tab {
   display: flex;
   flex-direction: row;
@@ -57,3 +60,4 @@
   height: auto; 
   transition: height 1s ease-in-out;
 }
+

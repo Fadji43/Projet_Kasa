@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../pages/styles.scss';
 import '../components/collapse.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { faChevronUp} from '@fortawesome/free-solid-svg-icons';
 
 function Collapse({ title, content }) {
   const [isCollapsed, setIsCollapsed] = useState(true);
@@ -20,7 +20,7 @@ function Collapse({ title, content }) {
         <h3 className="about-text">{title}</h3>
         <a onClick={toggleCollapse}>
           <FontAwesomeIcon
-            icon={isCollapsed ? faChevronDown : faChevronDown}
+            icon={isCollapsed ? faChevronUp : faChevronUp}
             className={`chevron-icon ${isCollapsed ? '' : 'open'}`}
           />
         </a>

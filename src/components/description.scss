@@ -7,6 +7,12 @@
   max-width: 1240px; 
   margin: 0 100px;
 }
+
+@media screen and (max-width: 768px) {
+  .accomodation_container {
+    margin: 0 30px;
+  }
+}
   
 .accomodation_left {
   grid-column: 1
@@ -27,5 +33,6 @@
     color: $primary-color;
   }
 }
+
 
 

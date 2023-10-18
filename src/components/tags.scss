@@ -13,4 +13,8 @@
     padding: 10px;
     }
   }
-  
+  @media screen and (max-width: 768px) {
+    .tags-container {
+      margin: 0 30px;
+    }
+  }

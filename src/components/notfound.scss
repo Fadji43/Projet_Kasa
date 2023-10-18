@@ -14,11 +14,22 @@
     }
 
     .error_message {
-        font-size: 36px;
-        
+        font-size: 36px;    
     }
     .button_error {
         margin: 70px 0;
+    }
+
+    @media screen and (max-width: 768px) {
+        .error_title {
+            font-size: 96px; 
+        }
+
+        .error_message {
+            font-size: $font-size-little-title;    
+            display: flex;
+            align-items: center; 
+        }
     }
 }
     

@@ -15,12 +15,12 @@ function Rate({ logements }) {
   for (let i = 0; i < 5; i++) {
     if (i < rating) {
       stars.push(
-        <FontAwesomeIcon key={i} icon={faStar} style={{ color: '#FF6060', fontSize: '24px' }} />
+        <FontAwesomeIcon className="star" key={i} icon={faStar} style={{ color: '#FF6060', fontSize: '24px' }} />
       );
       
     } else {
       stars.push(
-        <FontAwesomeIcon key={i} icon={faStar} style={{ color: '#F6F6F6', fontSize: '24px' }} />
+        <FontAwesomeIcon className="star" key={i} icon={faStar} style={{ color: '#F6F6F6', fontSize: '24px' }} />
       );
       
     }

@@ -14,24 +14,27 @@ function Slideshow({ logements }) {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % logements.pictures.length);
   };
 
-  // Vérifier si logements est défini et que pictures contient des images
+  // Vérifiesi logements est défini et que pictures contient des images
   if (!logements || !logements.pictures || logements.pictures.length === 0) {
     return <div>Aucune image disponible.</div>;
   }
 
   return (
-    <div className="slideshowContainer">
+  
       <div className="slideshow">
-        <button onClick={prevSlide} className="slideshow_button">
-          <FontAwesomeIcon icon={faChevronLeft} />
-        </button>
-        <img className='slideshow_img' src={logements.pictures[currentIndex]} alt={`Image ${currentIndex + 1}`} />
-        <button onClick={nextSlide} className="slideshow_button">
-          <FontAwesomeIcon icon={faChevronRight} />
-        </button>
-      </div>
-    </div>
+          <img className="slideshow_img" src={logements.pictures[currentIndex]} alt={`Image ${currentIndex + 1}`} />
+          <button onClick={prevSlide} className="slideshow_button slideshow_button--left">
+            <FontAwesomeIcon icon={faChevronLeft} />
+          </button>
+          <button onClick={nextSlide} className="slideshow_button slideshow_button--right">
+            <FontAwesomeIcon icon={faChevronRight} />
+          </button>
+          <div className="photoCount">{currentIndex + 1}/{logements.pictures.length}</div>
+        </div>
+ 
+    
   );
+  
 }
 
 export default Slideshow;

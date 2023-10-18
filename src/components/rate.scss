@@ -1,30 +1,39 @@
 @import  '../pages/styles.scss';
 
+.accomodation_host {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 30px 100px;
+  column-gap: 100px;
+}
+
+@media screen and (max-width: 768px) {
   .accomodation_host {
-    display: flex; 
-    flex-direction: column;
-    align-items: flex-end; 
-    margin: 30px 100px;
-    column-gap: 100px;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 20px;
+    margin: 0 30px; 
   }
-  
- .profil {
+}
+
+.profil {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
   margin-bottom: 50px;
 }
 
-
-  .host {
+.host {
   width: 50%;
-  display: flex; /* Utilisez Flexbox ici */
-  flex-direction: column; /* Organisez le nom et le prénom en colonne */
+  display: flex;
+  flex-direction: column;
   font-size: $font-size-little-title;
   color: $primary-color;
-  }
+}
 
-  .host_img {
+.host_img {
   width: 64px;
   border-radius: 80%;
-  }
+}
