@@ -25,21 +25,25 @@ function Housing() {
   const logements = logementsData.find((log) => log.id === id);
 
   return (
-    <main>
-      <Header />
-      <Slideshow logements={logements} />
-      <Layout className="layout">
-        <div className="left-column">
-          <Description logements={logements} />
-          <Tags logements={logements} />
-        </div>
-        <div className="right-column">
-          <Rate logements={logements} />
-        </div>
-      </Layout>
-      <Dropdown logements={logements} />
-      <Footer />
-    </main>
+    <body>
+      <main>
+        <Header />
+        <Slideshow logements={logements} />
+        <Layout className="layout">
+          <div className="left-column">
+            <Description logements={logements} />
+            <Tags logements={logements} />
+          </div>
+          <div className="right-column">
+            <Rate logements={logements} />
+          </div>
+        </Layout>
+        <Dropdown logements={logements} />
+      </main>
+        <footer>
+          <Footer />
+        </footer> 
+    </body>
   );
 }
 

@@ -1,12 +1,14 @@
 @import  '../pages/styles.scss';
 
-.tags-container {
+.tags-container { 
     display: flex; 
     flex-direction: row;
     gap: 20px;
     margin: 0 100px;
     
     .tag{
+    display: flex;
+    white-space: nowrap;
     color: white; 
     background-color: $primary-color;
     border-radius: 20px; 
