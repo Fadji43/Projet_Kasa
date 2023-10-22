@@ -6,11 +6,15 @@ import Notfound from '../components/Notfound';
 
 export default function Error() {
     return (
-        <main>
-            <Header />
-            <Notfound />
-            <Footer />
-        </main>
-        
+        <div>
+            <main>
+                <Header />
+                <Notfound />
+            </main> 
+            <footer>
+                <Footer />
+            </footer> 
+        </div>
+            
     )
 }

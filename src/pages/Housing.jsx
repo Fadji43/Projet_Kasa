@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import Slideshow from '../components/Slideshow';
@@ -14,18 +14,19 @@ function Housing() {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  // Vérifiez si l'ID est valide
-  const isValidId = logementsData.some((logement) => logement.id === id);
+  useEffect(() => {
+    // Vérifiez si l'ID est valide
+    const isValidId = logementsData.some((logement) => logement.id === id);
 
-  if (!isValidId) {
-    navigate('./error'); // Redirige vers la page d'erreur si l'ID n'est pas valide
-    return null; 
-  }
+    if (!isValidId) {
+      navigate('./error'); // Redirige vers la page d'erreur si l'ID n'est pas valide
+    }
+  }, [id, navigate]);
 
   const logements = logementsData.find((log) => log.id === id);
 
   return (
-    <body>
+    <div>
       <main>
         <Header />
         <Slideshow logements={logements} />
@@ -43,7 +44,7 @@ function Housing() {
         <footer>
           <Footer />
         </footer> 
-    </body>
+    </div>
   );
 }
 

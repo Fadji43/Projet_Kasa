@@ -10,7 +10,7 @@ function Card() {
       <article className="card_item">
         <Link to={`/housing/${item.id}`}>
           <img src={item.cover} alt={`Item ${item.id}`} className="card_img" />
-          <div class="curtain"></div>
+          <div className="curtain"></div>
         </Link>
         <p className="card_title">{item.title}</p>
       </article>

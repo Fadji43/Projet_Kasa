@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 export default function About() {
         return (
-            <body>
+            <div>
                 <main>
                 <Header />
                 <BannerAbout />
@@ -19,7 +19,7 @@ export default function About() {
             <footer>
                 <Footer />
             </footer> 
-            </body>
+            </div>
         )
     }
     

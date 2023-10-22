@@ -11,13 +11,14 @@
     .error_title {
         font-size: 288px;
         font-weight: $font-weight-bold;
+        margin :0;
     }
 
     .error_message {
         font-size: 36px;    
     }
     .button_error {
-        margin: 70px 0;
+        margin: 20px 0;
     }
 
     @media screen and (max-width: 768px) {
