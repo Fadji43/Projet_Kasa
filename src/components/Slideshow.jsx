@@ -22,7 +22,7 @@ function Slideshow({ logements }) {
   return (
   
       <div className="slideshow">
-          <img className="slideshow_img" src={logements.pictures[currentIndex]} alt={`Image ${currentIndex + 1}`} />
+          <img className="slideshow_img" src={logements.pictures[currentIndex]} alt={`caroussel logement ${currentIndex + 1}`} />
           <button onClick={prevSlide} className="slideshow_button slideshow_button--left">
             <FontAwesomeIcon icon={faChevronLeft} />
           </button>

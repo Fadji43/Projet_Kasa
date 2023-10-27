@@ -18,7 +18,7 @@ function Collapse({ title, content }) {
         className={`about-tab ${isCollapsed ? '' : 'open'}`}
       >
         <h3 className="about-text">{title}</h3>
-        <a onClick={toggleCollapse}>
+        <a href="/" onClick={toggleCollapse}>
           <FontAwesomeIcon
             icon={isCollapsed ? faChevronUp : faChevronUp}
             className={`chevron-icon ${isCollapsed ? '' : 'open'}`}
