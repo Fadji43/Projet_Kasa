@@ -24,7 +24,7 @@ function Dropdown({ logements }) {
           className={`about-tab ${isDescriptionCollapsed ? '' : 'open'}`}
         >
           <h3 className="dropdown-title">Description</h3>
-          <a onClick={toggleDescriptionCollapse}>
+          <a href="/" onClick={toggleDescriptionCollapse}>
             <FontAwesomeIcon
               icon={isDescriptionCollapsed ? faChevronDown : faChevronDown}
               className={`chevron-icon ${isDescriptionCollapsed ? '' : 'open'}`}
@@ -43,7 +43,7 @@ function Dropdown({ logements }) {
           className={`about-tab ${isEquipmentsCollapsed ? '' : 'open'}`}
         >
           <h3 className="dropdown-title">Équipements</h3>
-          <a onClick={toggleEquipmentsCollapse}>
+          <a href="/" onClick={toggleEquipmentsCollapse}>
             <FontAwesomeIcon
               icon={isEquipmentsCollapsed ? faChevronDown : faChevronDown}
               className={`chevron-icon ${isEquipmentsCollapsed ? '' : 'open'}`}

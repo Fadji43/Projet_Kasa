@@ -31,7 +31,7 @@ function Rate({ logements }) {
         {logements.host && (
           <div className='profil'>
             <span className="host">{logements.host.name}</span>
-            <img className="host_img" src={logements.host.picture} alt="photo profil" />
+            <img className="host_img" src={logements.host.picture} alt="profil" />
           </div>
         )}
         <div className="accomodation_rating">
