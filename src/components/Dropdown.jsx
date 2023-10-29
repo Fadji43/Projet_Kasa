@@ -24,12 +24,12 @@ function Dropdown({ logements }) {
           className={`about-tab ${isDescriptionCollapsed ? '' : 'open'}`}
         >
           <h3 className="dropdown-title">Description</h3>
-          <a href="/" onClick={toggleDescriptionCollapse}>
+          <div  onClick={toggleDescriptionCollapse}>
             <FontAwesomeIcon
               icon={isDescriptionCollapsed ? faChevronDown : faChevronDown}
               className={`chevron-icon ${isDescriptionCollapsed ? '' : 'open'}`}
             />
-          </a>
+          </div>
         </article>
         {isDescriptionCollapsed ? null : (
           <div className='dropdown-text'>
@@ -43,12 +43,12 @@ function Dropdown({ logements }) {
           className={`about-tab ${isEquipmentsCollapsed ? '' : 'open'}`}
         >
           <h3 className="dropdown-title">Équipements</h3>
-          <a href="/" onClick={toggleEquipmentsCollapse}>
+          <div onClick={toggleEquipmentsCollapse}>
             <FontAwesomeIcon
               icon={isEquipmentsCollapsed ? faChevronDown : faChevronDown}
               className={`chevron-icon ${isEquipmentsCollapsed ? '' : 'open'}`}
             />
-          </a>
+          </div>
         </article>
         {isEquipmentsCollapsed ? null : (
           <div className='dropdown-text'>
